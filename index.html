@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aminu Musa Ambursa – CV</title>
+<meta name="description" content="CV of Aminu Musa Ambursa, MSc Data Science student at the University of Exeter.">
+<style>
+:root{--ink:#1a1a1a;--muted:#555;--accent:#1f4e79;--bg:#fff;--rule:#d9d9d9}
+@media (prefers-color-scheme:dark){:root{--ink:#eee;--muted:#b0b0b0;--accent:#8fbfe8;--bg:#15171a;--rule:#33373d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+main{max-width:820px;margin:0 auto;padding:28px 20px 48px}
+h1{margin:0;font-size:2rem;letter-spacing:.5px}
+.role{color:var(--accent);font-weight:600;margin:2px 0 6px}
+.contact{color:var(--muted);margin:0 0 6px}
+a{color:var(--accent)}
+h2{font-size:.95rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--rule);padding-bottom:3px;margin:22px 0 8px}
+h3{font-size:1rem;margin:12px 0 2px}
+h3 span{font-weight:400;color:var(--muted)}
+ul{margin:4px 0 0;padding-left:20px}li{margin:2px 0}
+.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+.dl{display:inline-block;margin-top:10px;padding:6px 12px;border:1px solid var(--accent);border-radius:6px;text-decoration:none;font-weight:600}
+@page{size:A4;margin:11mm 13mm}@media print{.dl{display:none}main{padding:0;max-width:none}body{font-size:9pt;line-height:1.28}h1{font-size:20pt}h2{margin:8px 0 3px;font-size:8.5pt}h3{margin:6px 0 1px;font-size:9.5pt}ul{margin:2px 0 0}li{margin:0}p{margin:3px 0}}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>AMINU MUSA AMBURSA</h1>
+<p class="role">Graduate Data Scientist | Data Analyst</p>
+<p class="contact">Exeter, UK · <a href="mailto:aminuambursauk@gmail.com">aminuambursauk@gmail.com</a> · <a href="https://github.com/aminuambursa">github.com/aminuambursa</a></p>
+<a class="dl" href="Aminu_Musa_Ambursa_CV.pdf">Download PDF</a>
+</header>
+
+<h2>Profile</h2>
+<p>MSc Data Science student at the University of Exeter with a BSc in Computer Science. Project experience in machine learning, NLP, SQL and computer vision, with reproducible Python workflows. Seeking a graduate or junior data role.</p>
+
+<h2>Skills</h2>
+<ul>
+<li><b>Programming and data:</b> Python, SQL (MySQL), data preprocessing, EDA, visualisation</li>
+<li><b>Machine learning:</b> Linear, Random Forest and Support Vector Regression; K-Means; MLP neural networks (PyTorch); hyperparameter tuning</li>
+<li><b>Evaluation:</b> R², MAE, RMSE, ROC-AUC, mAP, precision/recall, bootstrap confidence intervals</li>
+<li><b>NLP and networks:</b> sentiment classification, topic modelling, graph features</li>
+<li><b>Computer vision:</b> object detection (YOLOv8)</li>
+<li><b>Workflow:</b> modular code, testing, DVC, HTML reporting · <b>Also:</b> cloud and network security fundamentals</li>
+</ul>
+
+<h2>Education</h2>
+<div class="row"><b>MSc Data Science, University of Exeter, UK</b><span class="muted">2026 – present</span></div>
+<div class="row"><b>BSc Computer Science, University of Science and Technology Aliero, Nigeria</b><span class="muted">2016 – 2021</span></div>
+
+<h2>Selected Projects</h2>
+
+<h3>California Housing Price Prediction <span>· Machine Learning</span></h3>
+<ul>
+<li>Built a leakage-free pipeline on 20,640 districts: model-based imputation (RMSE 80 vs 410 for median fill), ratio features and K-Means (k = 6) geographic clusters.</li>
+<li>Tuned and compared Linear, Random Forest, SVR and MLP models. <b>Random Forest was best (R² 0.851, test RMSE ≈ $44.0k)</b>; the MLP followed (R² 0.818).</li>
+<li>Showed with bootstrap tests that the model rankings were significant (p &lt; 0.001).</li>
+</ul>
+
+<h3>Neural Network Regression (MLP)</h3>
+<ul>
+<li>Selected the architecture by random search over 30 configurations (4 hidden layers, dropout 0.2, early stopping).</li>
+<li>Regularisation cut the train–test RMSE gap from ≈$21.0k to ≈$2.0k, giving the best generalisation of the four models.</li>
+</ul>
+
+<h3>Amazon Digital Music Review Sentiment <span>· NLP and Network Analysis</span></h3>
+<ul>
+<li>Classified sentiment on 123,994 reviews using TF-IDF, VADER, LDA topics and product co-review network features.</li>
+<li>Text-only ROC-AUC was 0.946. Adding topic and network features raised it to 0.951, and the network features added a statistically significant signal (McNemar p &lt; 0.001).</li>
+</ul>
+
+<h3>Object Detection with YOLOv8 <span>· Computer Vision</span></h3>
+<ul>
+<li>Detected cars and pedestrians with YOLOv8n on 100 images (45 COCO, 45 BDD100K, 10 self-captured).</li>
+<li>Results: mAP@0.5 0.523, precision 0.687, recall 0.512, 0.15 s per image on CPU. Error analysis showed failures on small, occluded, low-light objects, with image enhancement proposed as a fix.</li>
+</ul>
+
+<h3>Farm Sustainability Database <span>· SQL</span></h3>
+<ul>
+<li>Normalised a 23-column flat file to 3NF across six tables, with an ERD, and implemented it in MySQL with keys, constraints and indexes.</li>
+<li>Verified the schema with joins that reproduced all 20 source rows. Also designed a RESTful API and a MongoDB document alternative.</li>
+</ul>
+
+<h3>Reproducible Data Science Pipeline</h3>
+<ul>
+<li>Python workflow covering classification, clustering and regression, with modular functions, tests, DVC stages, configurable parameters and HTML reports.</li>
+</ul>
+
+<h2>Certifications</h2>
+<ul>
+<li>Certificate of Cloud Security Knowledge (CCSK)</li>
+<li>Cisco Networking Academy – Introduction to Cybersecurity</li>
+<li>Trend Micro CyberTalents – Introduction to Cybersecurity Bootcamp</li>
+<li>Mastercard Foundation – Jobberman Accelerated Soft Skills Training</li>
+</ul>
+
+<h2>Memberships</h2>
+<p>Exeter Computer Science Society · IEEE Computer Society · British Computer Society · Nigeria Computer Society (Student Member)</p>
+
+<h2>Languages</h2>
+<p>English – full professional proficiency</p>
+</main>
+</body>
+</html>
